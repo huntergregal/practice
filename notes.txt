@@ -1,0 +1,25 @@
+Install gdb-peda
+
+To run 32bit binaries on 64bit OS - linux:
+	dpkg --add-architecture i386
+	apt-get update
+	apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 libx32gcc-4.8-dev libc6-dev-i386
+
+Disable ASLR:
+	echo 0 > /proc/sys/kernel/randomize_va_space
+
+Compile without stack protext and enable debug:
+	-z execstack --allows stack execution
+	-fno-stack-protector -- removes smash protections
+	-g --enables debug symbols
+
+compile for 32bit:
+	-m32
+
+Stripped exe?
+	info file
+	break on entry
+
+child process forks?
+	set follow-fork-mode child
+	catch fork
