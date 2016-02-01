@@ -1,5 +1,12 @@
 Install gdb-peda
 
+gdb + peda:
+	pattern create 64 //create pattern
+	pattern offset AAAAA //find offset
+	x $ebp+0x7 //check base + offset value
+	break main //break main function
+	info file //entry point address and moar
+	
 Easy overflow:
 	perl -e 'print "A"x62"' > out
 	load into gdb with "run > out"
