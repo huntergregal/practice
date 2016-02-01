@@ -1,5 +1,9 @@
 Install gdb-peda
 
+Easy overflow:
+	perl -e 'print "A"x62"' > out
+	load into gdb with "run > out"
+
 To run 32bit binaries on 64bit OS - linux:
 	dpkg --add-architecture i386
 	apt-get update
