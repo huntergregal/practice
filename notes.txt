@@ -1,4 +1,6 @@
-Install gdb-peda
+Install gdb-peda:
+	git clone https://github.com/longld/peda.git ~/peda
+	echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 gdb + peda:
 	pattern create 64 //create pattern
