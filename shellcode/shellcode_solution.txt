@@ -1,5 +1,10 @@
 To solve:
-Overwrite the "key" variable with the proper key.
+1. break main
+2.step to gets
+3. create pattern
+4.input and step until EIP overwritten
+5.calculate length
+6.NOPS -> EIP + buf size + EIP size -> shellcode
 
 GDB Peda:
 
