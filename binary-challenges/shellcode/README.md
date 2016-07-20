@@ -6,12 +6,12 @@ The goal of these challenges is to overwrite the instruction pointer register so
 <details>
 <summary>**SPOILER**</summary>
 GDB Peda:</br>
-To solve:
-1. break main
-2.step to gets
-3. create pattern
-4.input and step until EIP overwritten
-5.calculate length
-6.NOPS -> EIP + buf size + EIP size -> shellcode
+1. break main</br>
+2. step to gets</br>
+3. create pattern</br>
+4. input and step until EIP overwritten</br>
+5. calculate length of new EIP value</br>
+6. New EIP value = Address of user input + buffer size in hex + size of EIP register (0x04 probably)</br>
+7. Paylaod = NOPS (\x90) -> new EIP Value -> shellcode</br>
 
 </details>
