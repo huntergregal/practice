@@ -41,6 +41,7 @@ OR
 
 python -c 'print "A"*32 + "\xef\xfe\xad\xde"' > payload
 ```
+* Sometimes you need to increase the NOP size, and add 32 or 96 bytes to the EIP! Sometimes memory changes, espescially if the exploit worked in gdb but not from shell
 * Run x32 binaries on x64 OS (debian-based linux)
 	* Note: This will make your system a multiarch system; If any packages are not found, remove those ones from the install command
 ```
